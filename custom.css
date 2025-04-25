@@ -1,0 +1,160 @@
+/* Animated nav link underline */
+.nav-link {
+  position: relative;
+  color: inherit;
+  transition: color 0.3s;
+  padding-bottom: 2px;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0; bottom: 0;
+  width: 100%; height: 2px;
+  background: linear-gradient(90deg, #3b82f6, #a78bfa, #f472b6);
+  border-radius: 2px;
+  transform: scaleX(0);
+  transition: transform 0.3s;
+  transform-origin: left;
+}
+.nav-link:hover::after, .nav-link-animate::after {
+  transform: scaleX(1);
+}
+
+/* Animated primary button */
+.btn-primary {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  font-weight: 700;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, #3b82f6, #a78bfa, #f472b6);
+  color: #fff;
+  box-shadow: 0 2px 16px 0 rgba(59,130,246,0.10);
+  transition: transform 0.15s, box-shadow 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+.btn-primary:hover {
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 4px 24px 0 rgba(59,130,246,0.15);
+}
+
+/* Footer link hover color */
+.footer-link {
+  color: #64748b;
+  transition: color 0.3s;
+}
+.footer-link:hover {
+  color: #a78bfa;
+}
+
+/* Smooth dark mode transitions */
+body, .bg-white, .bg-white\/80, .bg-white\/90, .text-gray-800, .text-gray-600 {
+  transition: background 0.5s, color 0.5s;
+}
+
+/* Animate gradient text */
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradientMove 3s ease-in-out infinite;
+}
+@keyframes gradientMove {
+  0%,100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Skill chip styles */
+.skill-chip {
+  display: inline-block;
+  background: linear-gradient(90deg, #e0e7ff, #f3e8ff, #fce7f3);
+  color: #4f46e5;
+  font-weight: 600;
+  border-radius: 9999px;
+  padding: 0.25rem 1rem;
+  font-size: 0.95rem;
+  box-shadow: 0 2px 8px 0 rgba(59,130,246,0.08);
+  transition: background 0.3s, color 0.3s, transform 0.2s;
+  cursor: pointer;
+}
+.skill-chip:hover {
+  background: linear-gradient(90deg, #a5b4fc, #c4b5fd, #f9a8d4);
+  color: #fff;
+  transform: scale(1.08) rotate(-2deg);
+}
+
+/* Glass card effect for about section */
+.bg-white\/70, .dark .bg-gray-800\/70 {
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(8px);
+}
+.dark .bg-gray-800\/70 {
+  background: rgba(31,41,55,0.7);
+}
+
+/* Secondary button */
+.btn-secondary {
+  display: inline-block;
+  padding: 0.7rem 1.8rem;
+  font-weight: 600;
+  border-radius: 9999px;
+  background: #fff;
+  color: #6366f1;
+  border: 2px solid #a5b4fc;
+  transition: background 0.2s, color 0.2s, border 0.2s, transform 0.2s;
+  box-shadow: 0 2px 8px 0 rgba(59,130,246,0.08);
+}
+.btn-secondary:hover {
+  background: #a5b4fc;
+  color: #fff;
+  border-color: #6366f1;
+  transform: translateY(-2px) scale(1.04);
+}
+
+/* Fade in animation */
+.animate-fade-in {
+  opacity: 0;
+  animation: fadeInUp 1s forwards;
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: none; }
+}
+
+/* Experience and Project Card Styles */
+.exp-card, .project-card {
+  background: rgba(255,255,255,0.85);
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 32px 0 rgba(59,130,246,0.08), 0 1.5px 8px 0 rgba(0,0,0,0.03);
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  transition: box-shadow 0.3s, transform 0.2s, background 0.3s;
+  border: 1.5px solid #e0e7ff;
+  position: relative;
+  overflow: hidden;
+}
+.exp-card:hover, .project-card:hover {
+  box-shadow: 0 8px 40px 0 rgba(168,139,250,0.20), 0 4px 16px 0 rgba(0,0,0,0.06);
+  transform: translateY(-4px) scale(1.02);
+  background: rgba(236,233,255,0.98);
+}
+.dark .exp-card, .dark .project-card {
+  background: rgba(31,41,55,0.92);
+  border-color: #6366f1;
+}
+
+/* Section Title */
+.section-title {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: #3730a3;
+  text-shadow: 0 1px 8px rgba(59,130,246,0.07);
+}
+.dark .section-title {
+  color: #a5b4fc;
+}
+
+/* Font rendering improvements */
+body, html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}

@@ -5,48 +5,86 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Arun Kumar Chukkala – AI/ML Engineer</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="custom.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', Arial, sans-serif; }
+    h1, h2, h3, h4, h5, h6 { font-family: 'Poppins', 'Inter', Arial, sans-serif; }
+  </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
-  <header class="bg-white shadow">
+<body class="bg-gray-50 text-gray-800 transition-colors duration-500" id="body">
+  <header class="bg-white/80 backdrop-blur sticky top-0 z-50 shadow-md transition-colors duration-500">
     <div class="container mx-auto px-6 py-4 flex items-center justify-between">
-      <h1 class="text-2xl font-bold">Arun Kumar Chukkala</h1>
-      <nav class="space-x-4">
-        <a href="#about" class="hover:text-blue-600">About</a>
-        <a href="#experience" class="hover:text-blue-600">Experience</a>
-        <a href="#projects" class="hover:text-blue-600">Projects</a>
-        <a href="#experiments" class="hover:text-blue-600">AI Experiments</a>
-        <a href="#contact" class="hover:text-blue-600">Contact</a>
-        <a href="https://arun3676.github.io/why-hire-arun/" class="hover:text-blue-600">Why Hire Me</a>
+      <h1 class="text-2xl font-bold tracking-tight">Arun Kumar Chukkala</h1>
+      <nav class="flex space-x-6">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#experiments" class="nav-link">AI Experiments</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <a href="https://arun3676.github.io/why-hire-arun/" class="nav-link">Why Hire Me</a>
       </nav>
+      <button id="darkToggle" class="ml-6 flex items-center px-2 py-1 rounded-full bg-gray-200 hover:bg-gray-300 shadow transition-all duration-300">
+        <span id="darkIcon" class="material-icons text-gray-600">dark_mode</span>
+      </button>
     </div>
   </header>
 
+  <!-- Hero Section -->
+  <section class="relative flex flex-col items-center justify-center text-center py-16 md:py-28 bg-gradient-to-br from-blue-100 via-purple-100 to-pink-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-colors duration-500">
+    <div class="absolute inset-0 pointer-events-none">
+      <svg class="w-full h-full" viewBox="0 0 1440 320"><path fill="#a5b4fc" fill-opacity="0.25" d="M0,224L80,218.7C160,213,320,203,480,176C640,149,800,107,960,112C1120,117,1280,171,1360,197.3L1440,224L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
+    </div>
+    <div class="relative z-10">
+      <h2 class="text-4xl md:text-6xl font-extrabold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 animate-gradient">AI/ML Engineer</h2>
+      <p class="text-lg md:text-2xl text-gray-700 dark:text-gray-300 mb-6 max-w-xl mx-auto">Building intelligent systems with LLMs, deep learning, and automation. Let's create the future together.</p>
+      <a href="#projects" class="btn-primary">View My Work</a>
+    </div>
+  </section>
+
   <main class="container mx-auto px-6 py-10">
     <!-- About Section -->
-    <section id="about" class="mb-12">
-      <h2 class="text-xl font-semibold mb-4">About Me</h2>
-      <p class="leading-relaxed">
-        AI/ML Engineer passionate about building intelligent systems that leverage cutting-edge LLMs, deep learning, and automation to solve real-world challenges. Experienced in end-to-end project delivery, from data engineering to model deployment.
-      </p>
-      <p class="mt-4">
-        Want to know more about my journey and achievements? <a href="https://arun3676.github.io/why-hire-arun/" class="text-blue-600 hover:underline">Read more here</a>.
-      </p>
+    <section id="about" class="mb-16 flex flex-col md:flex-row items-center gap-8 animate-fade-in">
+      <div class="w-36 h-36 rounded-full overflow-hidden shadow-lg border-4 border-blue-200 dark:border-gray-700 bg-white/70 dark:bg-gray-800/70 flex-shrink-0">
+        <img src="https://avatars.githubusercontent.com/u/22114682?v=4" alt="Arun Kumar Chukkala" class="w-full h-full object-cover">
+      </div>
+      <div class="flex-1 bg-white/70 dark:bg-gray-800/70 rounded-2xl shadow-xl p-8 backdrop-blur-lg">
+        <h2 class="text-2xl font-bold mb-2 text-blue-600 dark:text-blue-300">Arun Kumar Chukkala</h2>
+        <div class="flex flex-wrap gap-2 mb-3">
+          <span class="skill-chip">AI/ML Engineer</span>
+          <span class="skill-chip">LLMs</span>
+          <span class="skill-chip">Deep Learning</span>
+          <span class="skill-chip">Automation</span>
+          <span class="skill-chip">Python</span>
+          <span class="skill-chip">Cloud</span>
+        </div>
+        <p class="leading-relaxed text-gray-700 dark:text-gray-300 mb-3">
+          Passionate about building intelligent systems with LLMs, deep learning, and automation. Experienced in end-to-end project delivery, from data engineering to model deployment. Always eager to learn and push boundaries.
+        </p>
+        <div class="flex flex-wrap gap-4 items-center mt-4">
+          <a href="https://arun3676.github.io/why-hire-arun/" class="btn-primary">Why Hire Me?</a>
+          <a href="arun_resume.pdf" download target="_blank" class="btn-secondary" id="resumeDownload">Download Resume</a>
+        </div>
+      </div>
     </section>
+    <div class="w-full flex justify-center mb-12">
+      <div class="h-1 w-32 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 rounded-full animate-pulse"></div>
+    </div>
 
     <!-- Experience Section -->
-    <section id="experience" class="mb-12">
-      <h2 class="text-xl font-semibold mb-6">Professional Experience</h2>
-      <div class="space-y-8">
-        <div>
-          <h3 class="text-lg font-medium">AI/ML Engineer, Jefferies Group <span class="text-gray-600">03/2024 – Present</span></h3>
+    <section id="experience" class="mb-16">
+      <h2 class="section-title mb-8 flex items-center gap-2"><span class="material-icons text-blue-400">work</span> Professional Experience</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="exp-card animate-fade-in">
+          <h3 class="text-xl font-bold mb-2 text-blue-700 dark:text-blue-300 flex items-center gap-2"><span class="material-icons text-blue-400">engineering</span> AI/ML Engineer, Jefferies Group <span class="text-gray-600 dark:text-gray-400 text-base font-normal">03/2024 – Present</span></h3>
           <ul class="list-disc list-inside mt-2 ml-4 leading-relaxed">
             <li>Designed & deployed CLV prediction models on AWS S3, SageMaker & Lambda, improving segmentation accuracy by 30%.</li>
             <li>Processed over 10TB of data monthly; leveraged XGBoost, LightGBM & CatBoost to boost forecasting accuracy by 25%.</li>
             <li>Led hyperparameter tuning with Optuna & Bayesian Optimization, reducing training time by 40%.</li>
           </ul>
         </div>
-        <div>
-          <h3 class="text-lg font-medium">Associate AI/ML Engineer, Experian <span class="text-gray-600">01/2021 – 12/2022</span></h3>
+        <div class="exp-card animate-fade-in">
+          <h3 class="text-xl font-bold mb-2 text-blue-700 dark:text-blue-300 flex items-center gap-2"><span class="material-icons text-blue-400">business_center</span> Associate AI/ML Engineer, Experian <span class="text-gray-600 dark:text-gray-400 text-base font-normal">01/2021 – 12/2022</span></h3>
           <ul class="list-disc list-inside mt-2 ml-4 leading-relaxed">
             <li>Built real-time fraud detection pipelines handling 1M+ transactions/day; reduced false positives by 40%.</li>
             <li>Optimized ETL workflows with Azure Data Factory, processing 10TB/month and cutting data prep time by 25%.</li>
@@ -55,39 +93,43 @@
         </div>
       </div>
     </section>
+    <div class="w-full flex justify-center mb-12">
+      <div class="h-1 w-32 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 rounded-full animate-pulse"></div>
+    </div>
 
     <!-- Projects Section -->
-    <section id="projects" class="mb-12">
-      <h2 class="text-xl font-semibold mb-6">Key Projects</h2>
-      <div class="space-y-6">
-        <div>
-          <h3 class="text-lg font-medium">LLM-Powered Code Analysis System</h3>
-          <div class="flex flex-wrap space-x-4 mt-1">
-            <a href="https://github.com/arun3676/llm-code-analyzer" class="text-blue-600 hover:underline">GitHub Repo</a>
-            <a href="https://llm-code-analyzer.onrender.com/" class="text-blue-600 hover:underline">Live Demo</a>
+    <section id="projects" class="mb-16">
+      <h2 class="section-title mb-8 flex items-center gap-2"><span class="material-icons text-pink-400">apps</span> Key Projects</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="project-card animate-fade-in">
+          <h3 class="text-xl font-bold mb-2 text-pink-600 dark:text-pink-300 flex items-center gap-2"><span class="material-icons text-pink-400">code</span> LLM-Powered Code Analysis System</h3>
+          <div class="flex flex-wrap gap-4 mt-1 mb-2">
+            <a href="https://github.com/arun3676/llm-code-analyzer" class="btn-secondary">GitHub Repo</a>
+            <a href="https://llm-code-analyzer.onrender.com/" class="btn-primary">Live Demo</a>
           </div>
-          <ul class="list-disc list-inside mt-2 ml-4">
+          <ul class="list-disc list-inside ml-4">
             <li>Fused GPT-4, Claude & Gemini to detect code bugs with 40% higher accuracy.</li>
             <li>Engineered adaptive prompt strategies, reducing false positives by 30%.</li>
           </ul>
         </div>
-        <div>
-          <h3 class="text-lg font-medium">AI Learning Path Generator with RAG</h3>
-          <div class="flex flex-wrap space-x-4 mt-1">
-            <a href="https://github.com/arun3676/ai-learning-path-generator" class="text-blue-600 hover:underline">GitHub Repo</a>
+        <div class="project-card animate-fade-in">
+          <h3 class="text-xl font-bold mb-2 text-pink-600 dark:text-pink-300 flex items-center gap-2"><span class="material-icons text-pink-400">school</span> AI Learning Path Generator with RAG</h3>
+          <div class="flex flex-wrap gap-4 mt-1 mb-2">
+            <a href="https://github.com/arun3676/ai-learning-path-generator" class="btn-secondary">GitHub Repo</a>
           </div>
-          <ul class="list-disc list-inside mt-2 ml-4">
+          <ul class="list-disc list-inside ml-4">
             <li>Developed a Retrieval-Augmented Generation system, cutting memory usage by 45% with ChromaDB vectors.</li>
           </ul>
         </div>
-        <div>
-          <h3 class="text-lg font-medium">Multimodal AI for Medical Diagnosis</h3>
-          <div class="flex flex-wrap space-x-4 mt-1">
-            <a href="https://github.com/arun3676/multimodal-medical-diagnosis" class="text-blue-600 hover:underline">GitHub Repo</a>
-            <a href="https://multimodal-medical-diagnosis.onrender.com/" class="text-blue-600 hover:underline">Live Demo</a>
+        <div class="project-card animate-fade-in">
+          <h3 class="text-xl font-bold mb-2 text-pink-600 dark:text-pink-300 flex items-center gap-2"><span class="material-icons text-pink-400">favorite</span> Multimodal AI for Medical Diagnosis</h3>
+          <div class="flex flex-wrap gap-4 mt-1 mb-2">
+            <a href="https://github.com/arun3676/multimodal-medical-diagnosis" class="btn-secondary">GitHub Repo</a>
+            <a href="https://multimodal-medical-diagnosis.onrender.com/" class="btn-primary">Live Demo</a>
           </div>
-          <ul class="list-disc list-inside mt-2 ml-4">
-            <li>Integrated vision models and LLMs to achieve 92% diagnostic accuracy in under 2 seconds.</li>
+          <ul class="list-disc list-inside ml-4">
+            <li>Built a multimodal AI that combines radiology images & patient data for early disease detection.</li>
+            <li>Achieved 92% accuracy on test set; deployed interactive demo for clinicians.</li>
           </ul>
         </div>
       </div>
@@ -116,9 +158,16 @@
     </section>
   </main>
 
-  <footer class="bg-white text-center py-4">
-    <p class="text-sm">© 2025 Arun Kumar Chukkala. All rights reserved.</p>
+  <footer class="bg-white/90 dark:bg-gray-900 text-center py-6 mt-12 transition-colors duration-500">
+    <div class="flex justify-center space-x-6 mb-2">
+      <a href="https://github.com/arun3676" class="footer-link" target="_blank" aria-label="GitHub"><svg class="w-6 h-6 inline" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.207 11.387.6.113.793-.262.793-.582 0-.288-.012-1.243-.017-2.252-3.338.726-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.73.083-.73 1.204.085 1.838 1.237 1.838 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.305.762-1.606-2.665-.304-5.466-1.332-5.466-5.93 0-1.31.469-2.381 1.236-3.221-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.3 1.23.957-.266 1.984-.399 3.003-.404 1.018.005 2.045.138 3.003.404 2.29-1.552 3.296-1.23 3.296-1.23.653 1.653.242 2.873.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.803 5.624-5.475 5.921.43.37.823 1.102.823 2.222 0 1.604-.015 2.896-.015 3.289 0 .322.192.699.8.58C20.565 21.796 24 17.299 24 12c0-6.63-5.373-12-12-12z"/></svg></a>
+      <a href="https://www.linkedin.com/in/arun3676/" class="footer-link" target="_blank" aria-label="LinkedIn"><svg class="w-6 h-6 inline" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.28c-.966 0-1.75-.79-1.75-1.76s.784-1.76 1.75-1.76c.965 0 1.75.79 1.75 1.76s-.785 1.76-1.75 1.76zm13.5 11.28h-3v-5.6c0-1.34-.03-3.06-1.87-3.06-1.87 0-2.16 1.46-2.16 2.97v5.69h-3v-10h2.89v1.36h.04c.4-.75 1.38-1.54 2.84-1.54 3.04 0 3.6 2 3.6 4.59v5.59z"/></svg></a>
+      <a href="mailto:arun3676@gmail.com" class="footer-link" aria-label="Email"><svg class="w-6 h-6 inline" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12.713l11.985-9.713h-23.97zm11.985 2.287l-6.545-5.307-5.44 4.399-5.44-4.399-6.545 5.307v6.287h24z"/></svg></a>
+    </div>
+    <p class="text-sm text-gray-600 dark:text-gray-400">© 2025 Arun Kumar Chukkala. All rights reserved.</p>
   </footer>
+  <script src="main.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </body>
 </html>
 
