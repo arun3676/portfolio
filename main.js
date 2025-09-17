@@ -85,3 +85,40 @@ function fadeInOnScroll() {
   checkFade();
 }
 fadeInOnScroll();
+
+// Loading modal for project demos
+const loadingModal = document.getElementById('loadingModal');
+const loadingMessage = document.getElementById('loadingMessage');
+const demoLinks = document.querySelectorAll('.project-demo-link');
+
+const creativeLoadingMessages = [
+  "Brewing some digital coffee for the server...",
+  "Teaching the AI to be patient. It's a slow learner.",
+  "Warming up the free-tier hamsters. They need a moment.",
+  "Don't worry, it's not you, it's the cold server.",
+  "Our AI is just finishing its morning meditation.",
+  "Reticulating splines... or something like that.",
+  "Hang tight! The project is waking up from its nap."
+];
+
+demoLinks.forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    const url = this.href;
+
+    // Show modal with a random message
+    const randomIndex = Math.floor(Math.random() * creativeLoadingMessages.length);
+    loadingMessage.textContent = creativeLoadingMessages[randomIndex];
+    loadingModal.classList.remove('modal-inactive');
+    loadingModal.classList.add('modal-active');
+
+    // Open link after a delay and then hide modal
+    setTimeout(() => {
+      window.open(url, '_blank');
+      setTimeout(() => {
+        loadingModal.classList.remove('modal-active');
+        loadingModal.classList.add('modal-inactive');
+      }, 500); // Hide modal shortly after opening the link
+    }, 3500); // Wait 3.5 seconds before opening the link
+  });
+});

@@ -10,6 +10,24 @@
   <style>
     body { font-family: 'Inter', Arial, sans-serif; }
     h1, h2, h3, h4, h5, h6 { font-family: 'Poppins', 'Inter', Arial, sans-serif; }
+    .modal {
+      transition: opacity 0.25s ease;
+    }
+    .modal-active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .modal-inactive {
+      opacity: 0;
+      pointer-events: none;
+    }
+    .spinner {
+      border-top-color: #3498db;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
   </style>
 </head>
 <body class="bg-gray-50 text-gray-800 transition-colors duration-500" id="body">
@@ -63,7 +81,7 @@
         </p>
         <div class="flex flex-wrap gap-4 items-center mt-4">
           <a href="https://arun3676.github.io/why-hire-arun/" class="btn-primary">Why Hire Me?</a>
-          <a href="arun_resume.pdf" download target="_blank" class="btn-secondary" id="resumeDownload">Download Resume</a>
+          <a href="ARUN_CHUKKALA_AI_ENGINEER.pdf" download target="_blank" class="btn-secondary" id="resumeDownload">Download Resume</a>
         </div>
       </div>
     </section>
@@ -105,7 +123,7 @@
           <h3 class="text-xl font-bold mb-2 text-pink-600 dark:text-pink-300 flex items-center gap-2"><span class="material-icons text-pink-400">code</span> LLM-Powered Code Analysis System</h3>
           <div class="flex flex-wrap gap-4 mt-1 mb-2">
             <a href="https://github.com/arun3676/llm-code-analyzer" class="btn-secondary">GitHub Repo</a>
-            <a href="https://llm-code-analyzer.onrender.com/" class="btn-primary">Live Demo</a>
+            <a href="https://llm-code-analyzer.onrender.com/" class="btn-primary project-demo-link">Live Demo</a>
           </div>
           <ul class="list-disc list-inside ml-4">
             <li>Fused GPT-4, Claude & Gemini to detect code bugs with 40% higher accuracy.</li>
@@ -116,6 +134,7 @@
           <h3 class="text-xl font-bold mb-2 text-pink-600 dark:text-pink-300 flex items-center gap-2"><span class="material-icons text-pink-400">school</span> AI Learning Path Generator with RAG</h3>
           <div class="flex flex-wrap gap-4 mt-1 mb-2">
             <a href="https://github.com/arun3676/ai-learning-path-generator" class="btn-secondary">GitHub Repo</a>
+            <a href="https://ai-learning-path-generator.onrender.com/" class="btn-primary project-demo-link">Live Demo</a>
           </div>
           <ul class="list-disc list-inside ml-4">
             <li>Developed a Retrieval-Augmented Generation system, cutting memory usage by 45% with ChromaDB vectors.</li>
@@ -125,7 +144,7 @@
           <h3 class="text-xl font-bold mb-2 text-pink-600 dark:text-pink-300 flex items-center gap-2"><span class="material-icons text-pink-400">favorite</span> Multimodal AI for Medical Diagnosis</h3>
           <div class="flex flex-wrap gap-4 mt-1 mb-2">
             <a href="https://github.com/arun3676/multimodal-medical-diagnosis" class="btn-secondary">GitHub Repo</a>
-            <a href="https://multimodal-medical-diagnosis.onrender.com/" class="btn-primary">Live Demo</a>
+            <a href="https://multimodal-medical-diagnosis.onrender.com/" class="btn-primary project-demo-link">Live Demo</a>
           </div>
           <ul class="list-disc list-inside ml-4">
             <li>Built a multimodal AI that combines radiology images & patient data for early disease detection.</li>
@@ -168,6 +187,15 @@
   </footer>
   <script src="main.js"></script>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Loading Modal -->
+  <div id="loadingModal" class="modal modal-inactive fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center z-50">
+    <div class="bg-white dark:bg-gray-800 rounded-lg shadow-xl p-8 text-center max-w-sm mx-auto">
+      <div class="spinner w-12 h-12 rounded-full border-4 border-gray-300 dark:border-gray-600 mx-auto mb-4"></div>
+      <h3 class="text-xl font-bold mb-2 text-gray-800 dark:text-white">Waking up the AI...</h3>
+      <p id="loadingMessage" class="text-gray-600 dark:text-gray-400"></p>
+    </div>
+  </div>
 </body>
 </html>
 
