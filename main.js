@@ -53,9 +53,9 @@ function animateGradient() {
   if (!el) return;
   let deg = 0;
   setInterval(() => {
-    deg = (deg + 1) % 360;
-    el.style.backgroundImage = `linear-gradient(${deg}deg, #3b82f6, #a78bfa, #f472b6)`;
-  }, 30);
+    deg = (deg + 0.5) % 360;
+    el.style.backgroundImage = `linear-gradient(${deg}deg, #64748b, #94a3b8, #a5b4fc)`;
+  }, 60);
 }
 animateGradient();
 
@@ -63,7 +63,7 @@ animateGradient();
 const skillChips = document.querySelectorAll('.skill-chip');
 skillChips.forEach(chip => {
   chip.addEventListener('mouseenter', () => {
-    chip.style.transform = 'scale(1.12) rotate(-2deg)';
+    chip.style.transform = 'translateY(-1px) scale(1.04)';
   });
   chip.addEventListener('mouseleave', () => {
     chip.style.transform = '';
@@ -127,4 +127,37 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+
+  // Smooth accordion transitions for <details.project-accordion>
+  const accordions = document.querySelectorAll('details.project-accordion');
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function updateAccordion(el) {
+    const content = el.querySelector('.project-content');
+    if (!content) return;
+    if (el.open) {
+      content.style.maxHeight = content.scrollHeight + 'px';
+      content.style.opacity = '1';
+    } else {
+      content.style.maxHeight = '0px';
+      content.style.opacity = '0';
+    }
+  }
+
+  accordions.forEach(acc => {
+    const content = acc.querySelector('.project-content');
+    if (content) content.style.maxHeight = '0px';
+    acc.addEventListener('toggle', () => {
+      if (prefersReducedMotion) {
+        updateAccordion(acc);
+      } else {
+        updateAccordion(acc);
+        if (acc.open) setTimeout(() => updateAccordion(acc), 50);
+      }
+    });
+  });
+
+  window.addEventListener('resize', () => {
+    accordions.forEach(acc => { if (acc.open) updateAccordion(acc); });
+  });
 });
