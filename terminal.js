@@ -74,6 +74,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 break;
             case 'clear':
                 term.clear();
+                term.writeln('Welcome to Arun\'s Interactive Portfolio Terminal!');
+                term.writeln('Type `help` to see a list of available commands.');
                 break;
             default:
                 term.writeln(`Command not found: ${cmd}. Type 'help' for a list of commands.`);
