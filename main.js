@@ -160,4 +160,19 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('resize', () => {
     accordions.forEach(acc => { if (acc.open) updateAccordion(acc); });
   });
+
+  // Terminal toggle
+  const terminalWindow = document.getElementById('terminal-window');
+  const terminalToggle = document.getElementById('terminal-toggle');
+  const terminalClose = document.getElementById('terminal-close');
+
+  if (terminalWindow && terminalToggle && terminalClose) {
+    terminalToggle.addEventListener('click', () => {
+      terminalWindow.classList.toggle('hidden');
+    });
+
+    terminalClose.addEventListener('click', () => {
+      terminalWindow.classList.add('hidden');
+    });
+  }
 });
