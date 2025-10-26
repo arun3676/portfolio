@@ -64,240 +64,44 @@
     </div>
   </section>
 
-  <main class="container mx-auto px-6 py-10">
-    <!-- About Section -->
-    <section id="about" class="mb-16 flex flex-col md:flex-row items-center gap-8 animate-fade-in">
-      <div class="w-36 h-36 rounded-full overflow-hidden shadow-lg border-4 border-blue-200 dark:border-gray-700 bg-white/70 dark:bg-gray-800/70 flex-shrink-0">
-        <img src="https://avatars.githubusercontent.com/u/22114682?v=4" alt="Arun Kumar Chukkala" class="w-full h-full object-cover">
-      </div>
-      <div class="flex-1 bg-white/70 dark:bg-gray-800/70 rounded-2xl shadow-xl p-8 backdrop-blur-lg">
-        <h2 class="text-2xl font-bold mb-2 text-blue-600 dark:text-blue-300">Arun Kumar Chukkala</h2>
-        <p class="leading-relaxed text-gray-700 dark:text-gray-300 mb-3">
-          I work in AI/ML not because it’s the obvious career path, but because it’s the only kind of work that feels like play to me. When I’m experimenting with models, building agents, or pushing LLMs into new use cases, I don’t feel like I’m “on the clock.” I feel like I’m solving puzzles that I actually want to be stuck with.
-        </p>
-        <p class="leading-relaxed text-gray-700 dark:text-gray-300 mb-3">
-          I’ve had my share of self-doubt and leaned on AI tools to help me code and deliver. But that doesn’t take away from what I bring—it shows how I work. I use every resource at my disposal to move fast, learn deeply, and build things that actually run. The point isn’t typing every line by hand—it’s creating systems that work in the real world.
-        </p>
-        <h3 class="text-lg font-semibold mt-4 mb-2 text-blue-600 dark:text-blue-300">Core Skills</h3>
-        <div class="flex flex-wrap gap-2 mb-3">
-          <span class="skill-chip">Python</span>
-          <span class="skill-chip">SQL</span>
-          <span class="skill-chip">LangChain</span>
-          <span class="skill-chip">LlamaIndex</span>
-          <span class="skill-chip">ChromaDB</span>
-          <span class="skill-chip">Pinecone</span>
-          <span class="skill-chip">PyTorch</span>
-          <span class="skill-chip">Hugging Face</span>
-          <span class="skill-chip">RAG</span>
-          <span class="skill-chip">Fine-Tuning</span>
-          <span class="skill-chip">Prompt Engineering</span>
-          <span class="skill-chip">Docker</span>
-          <span class="skill-chip">GCP</span>
-          <span class="skill-chip">AWS</span>
-        </div>
-        <div class="flex flex-wrap gap-4 items-center mt-4">
-          <a href="https://arun3676.github.io/why-hire-arun/" class="btn-primary">Why Hire Me?</a>
-          <a href="ARUN_CHUKKALA_AI_ENGINEER.pdf" download target="_blank" class="btn-secondary" id="resumeDownload">Download Resume</a>
-        </div>
-      </div>
-    </section>
-    <div class="w-full flex justify-center mb-12">
-      <div class="h-1 w-32 bg-gradient-to-r from-gray-200 via-slate-300 to-indigo-300 rounded-full animate-pulse"></div>
+  <main class="container mx-auto p-4 md:p-6">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <!-- Tile 1: Intro (Large) -->
+      <a href="#about" class="tile col-span-2 row-span-2" style="background-color: var(--lumia-orange);">
+        <h2 class="tile-title text-4xl">Hello, I'm Arun.</h2>
+        <p class="tile-subtitle">AI/ML Engineer</p>
+      </a>
+      <!-- Tile 2: Projects -->
+      <a href="#projects" class="tile" style="background-color: var(--lumia-green);">
+        <i data-lucide="folder-kanban" class="tile-icon"></i>
+        <h2 class="tile-title">Projects</h2>
+      </a>
+      <!-- Tile 3: Why Hire Me -->
+      <a href="https://arun3676.github.io/why-hire-arun/" class="tile" style="background-color: var(--lumia-blue);">
+        <i data-lucide="user-check" class="tile-icon"></i>
+        <h2 class="tile-title">Why Hire Me</h2>
+      </a>
+      <!-- Tile 4: Experience -->
+      <a href="#experience" class="tile" style="background-color: var(--lumia-purple);">
+        <i data-lucide="briefcase" class="tile-icon"></i>
+        <h2 class="tile-title">Experience</h2>
+      </a>
+      <!-- Tile 5: Resume -->
+      <a href="ARUN_CHUKKALA_AI_ENGINEER.pdf" class="tile" style="background-color: var(--lumia-red);">
+        <i data-lucide="file-text" class="tile-icon"></i>
+        <h2 class="tile-title">Resume</h2>
+      </a>
+      <!-- Tile 6: Contact -->
+      <a href="#contact" class="tile" style="background-color: var(--lumia-teal);">
+        <i data-lucide="mail" class="tile-icon"></i>
+        <h2 class="tile-title">Contact</h2>
+      </a>
+      <!-- Tile 7: Fun Projects -->
+      <a href="#fun-projects" class="tile text-gray-900" style="background-color: var(--lumia-yellow);">
+        <i data-lucide="gamepad-2" class="tile-icon"></i>
+        <h2 class="tile-title">Just for Fun</h2>
+      </a>
     </div>
-
-    <!-- Experience Section -->
-    <section id="experience" class="mb-16">
-      <h2 class="section-title mb-8 flex items-center gap-2"><span class="material-icons text-indigo-400">work</span> Professional Experience</h2>
-      <div class="relative timeline-container">
-        <div class="timeline-line"></div>
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content exp-card animate-fade-in">
-            <h3 class="text-xl font-bold mb-1 text-indigo-700 dark:text-indigo-300">Independent AI Engineer / Researcher</h3>
-            <p class="text-sm font-semibold text-gray-500 dark:text-gray-400 mb-2">2023 – Present</p>
-            <ul class="list-disc list-inside ml-4 leading-relaxed text-sm">
-              <li>Built 15+ LLM-powered prototypes covering RAG, agent systems, and evaluation frameworks.</li>
-              <li>Experimented with fine-tuning and inference optimization using vLLM, LoRA, and lightweight deployment strategies.</li>
-              <li>Actively applying multi-agent orchestration patterns (ReAct, LangGraph) to real-world tasks.</li>
-              <li>Publishing open-source projects on GitHub with working demos.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-    <div class="w-full flex justify-center mb-12">
-      <div class="h-1 w-32 bg-gradient-to-r from-gray-200 via-slate-300 to-indigo-300 rounded-full animate-pulse"></div>
-    </div>
-
-    <!-- Projects Section -->
-    <section id="projects" class="mb-16">
-      <h2 class="section-title mb-8 flex items-center gap-2"><span class="material-icons text-indigo-400">apps</span> Key Projects</h2>
-      <div class="grid md:grid-cols-2 gap-8">
-        <details class="project-card project-accordion animate-fade-in">
-          <summary class="project-summary">
-            <h3 class="text-xl font-bold mb-0 text-indigo-700 dark:text-indigo-300 flex items-center gap-2"><span class="material-icons text-indigo-400">school</span> AI Learning Path Generator</h3>
-            <span class="material-icons chevron">expand_more</span>
-          </summary>
-          <div class="project-content">
-            <p class="text-sm text-gray-600 dark:text-gray-400 mb-2">Crafts personalized AI learning paths using RAG. Built with React, Flask, and multiple AI APIs for adaptive roadmaps.</p>
-            <div class="flex flex-wrap gap-4 mt-1 mb-2">
-              <a href="https://github.com/arun3676/ai-learning-path-generator" class="btn-secondary">GitHub Repo</a>
-              <a href="https://ai-learning-path-api.onrender.com/" class="btn-primary project-demo-link">Live Demo</a>
-            </div>
-            <ul class="list-disc list-inside ml-4">
-              <li>Used LangChain + ChromaDB for semantic retrieval.</li>
-              <li>Integrated evaluation pipelines to test retrieval accuracy and path relevance.</li>
-            </ul>
-          </div>
-        </details>
-        <details class="project-card project-accordion animate-fade-in">
-          <summary class="project-summary">
-            <h3 class="text-xl font-bold mb-0 text-indigo-700 dark:text-indigo-300 flex items-center gap-2"><span class="material-icons text-indigo-400">code</span> AI Code Analyzer</h3>
-            <span class="material-icons chevron">expand_more</span>
-          </summary>
-          <div class="project-content">
-            <p class="text-sm text-gray-600 dark:text-gray-400 mb-2">A multi-LLM tool for code reviews & bug detection with a Matrix-themed UI, deployed on HuggingFace Spaces.</p>
-            <div class="flex flex-wrap gap-4 mt-1 mb-2">
-              <a href="https://github.com/arun3676/ai-code-analyzer" class="btn-secondary">GitHub Repo</a>
-              <a href="https://huggingface.co/spaces/arunn7/ai-code-analyzer" class="btn-primary project-demo-link">Live Demo</a>
-            </div>
-            <ul class="list-disc list-inside ml-4">
-              <li>Built multi-step prompt chaining for structured reasoning.</li>
-              <li>Added evaluation loop to reduce hallucination and improve feedback reliability.</li>
-            </ul>
-          </div>
-        </details>
-        <details class="project-card project-accordion animate-fade-in">
-          <summary class="project-summary">
-            <h3 class="text-xl font-bold mb-0 text-indigo-700 dark:text-indigo-300 flex items-center gap-2"><span class="material-icons text-indigo-400">favorite</span> Multimodal Medical Diagnosis Prototype</h3>
-            <span class="material-icons chevron">expand_more</span>
-          </summary>
-          <div class="project-content">
-            <p class="text-sm text-gray-600 dark:text-gray-400 mb-2">Prototype combining vision models + LLMs for medical image/text analysis.</p>
-            <div class="flex flex-wrap gap-4 mt-1 mb-2">
-              <a href="https://github.com/arun3676/multimodal-medical-diagnosis" class="btn-secondary">GitHub Repo</a>
-            </div>
-            <ul class="list-disc list-inside ml-4">
-              <li>Integrated PyTorch CNNs with GPT-4 for explainable diagnosis support.</li>
-              <li>Designed RAG layer for retrieving medical knowledge and improving model accuracy.</li>
-            </ul>
-          </div>
-        </details>
-        <details class="project-card project-accordion animate-fade-in">
-          <summary class="project-summary">
-            <h3 class="text-xl font-bold mb-0 text-indigo-700 dark:text-indigo-300 flex items-center gap-2"><span class="material-icons text-indigo-400">groups</span> Agentception</h3>
-            <span class="material-icons chevron">expand_more</span>
-          </summary>
-          <div class="project-content">
-            <p class="text-sm text-gray-600 dark:text-gray-400 mb-2">Multi-agent pipeline for job market intelligence & personalized outreach automation.</p>
-            <div class="flex flex-wrap gap-4 mt-1 mb-2">
-               <span class="skill-chip">Under Development</span>
-            </div>
-            <ul class="list-disc list-inside ml-4">
-              <li>Combined Scout (discovery), RAG (research), and Writer (email) agents with Exa.ai + DeepSeek APIs.</li>
-              <li>Implemented NLP content validation and role-aware personalization.</li>
-            </ul>
-          </div>
-        </details>
-      </div>
-    </section>
-
-    <div class="w-full flex justify-center mb-12">
-      <div class="h-1 w-32 bg-gradient-to-r from-gray-200 via-slate-300 to-indigo-300 rounded-full animate-pulse"></div>
-    </div>
-
-    <!-- Just for Fun: Personal Projects -->
-    <section id="fun-projects" class="mb-16">
-      <h2 class="section-title mb-8 flex items-center gap-2"><span class="material-icons text-indigo-400">celebration</span> Just for Fun: Personal Projects</h2>
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        
-        <!-- PurpleCalmm -->
-        <div class="project-card animate-fade-in">
-          <h3 class="text-xl font-bold mb-2 text-indigo-700 dark:text-indigo-300">PurpleCalmm</h3>
-          <p class="text-sm text-gray-600 dark:text-gray-400 mb-2">A cozy, cat-themed wellness app for relaxation, journaling, and sleep assistance.</p>
-          <div class="flex flex-wrap gap-4 mt-1 mb-2">
-            <a href="https://purple-calmm.vercel.app/" class="btn-primary project-demo-link">Live Demo</a>
-          </div>
-        </div>
-
-        <!-- relationdraama -->
-        <div class="project-card animate-fade-in">
-          <h3 class="text-xl font-bold mb-2 text-indigo-700 dark:text-indigo-300">relationdraama</h3>
-          <p class="text-sm text-gray-600 dark:text-gray-400 mb-2">Analyzes relationship compatibility with interactive, scientific-themed quizzes.</p>
-          <div class="flex flex-wrap gap-4 mt-1 mb-2">
-            <a href="https://relationdraama.streamlit.app/" class="btn-primary project-demo-link">Live Demo</a>
-          </div>
-        </div>
-
-        <!-- jiminaah -->
-        <div class="project-card animate-fade-in">
-          <h3 class="text-xl font-bold mb-2 text-indigo-700 dark:text-indigo-300">jiminaah</h3>
-          <p class="text-sm text-gray-600 dark:text-gray-400 mb-2">A weather-inspired mood and journaling PWA for stylish mental wellness tracking.</p>
-          <div class="flex flex-wrap gap-4 mt-1 mb-2">
-            <a href="https://jiminaah.vercel.app/" class="btn-primary project-demo-link">Live Demo</a>
-          </div>
-        </div>
-
-        <!-- vibe-check -->
-        <div class="project-card animate-fade-in">
-          <h3 class="text-xl font-bold mb-2 text-indigo-700 dark:text-indigo-300">vibe-check</h3>
-          <p class="text-sm text-gray-600 dark:text-gray-400 mb-2">Multi-modal AI music recommendation tool that finds songs based on an image or text vibe.</p>
-          <div class="flex flex-wrap gap-4 mt-1 mb-2">
-            <a href="https://vibeee-check.streamlit.app/" class="btn-primary project-demo-link">Live Demo</a>
-          </div>
-        </div>
-
-        <!-- rizz-check -->
-        <div class="project-card animate-fade-in">
-          <h3 class="text-xl font-bold mb-2 text-indigo-700 dark:text-indigo-300">rizz-check</h3>
-          <p class="text-sm text-gray-600 dark:text-gray-400 mb-2">A lightweight React app to "check your rizz" (charisma/flirtation skills).</p>
-          <div class="flex flex-wrap gap-4 mt-1 mb-2">
-            <a href="https://rizz-check.vercel.app/" class="btn-primary project-demo-link">Live Demo</a>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Journal Section -->
-    <section id="journal" class="mb-12">
-      <h2 class="section-title mb-8 flex items-center gap-2"><span class="material-icons text-indigo-400">edit</span> Journal & Reflections</h2>
-      <div class="space-y-4 leading-relaxed">
-        <p><strong>Building Agentception:</strong> Lessons from designing a multi-agent system and why coordination matters more than raw model power.</p>
-        <p><strong>RAG in Practice:</strong> What I learned about chunking, retrieval failures, and making systems that actually answer the right question.</p>
-        <p><strong>Work That Feels Like Play:</strong> Why I’ll always choose AI work over anything else—because it’s the one space where pressure and curiosity blend into focus.</p>
-      </div>
-    </section>
-
-    <!-- More About Me Section -->
-    <section id="more-about" class="mb-16">
-      <h2 class="section-title mb-8 flex items-center gap-2"><span class="material-icons text-indigo-400">person</span> More About Me</h2>
-      <div class="space-y-4 leading-relaxed">
-        <ul class="list-disc list-inside ml-4">
-          <li>I follow sports closely—not just as a fan, but because I enjoy analyzing strategy, competition, and how small decisions change outcomes.</li>
-          <li>I listen to podcasts regularly, from tech and philosophy to business and culture, to stay connected to different ways of thinking.</li>
-          <li>I track almost every development in AI and try to understand it from first principles—how it works under the hood, not just what it does.</li>
-          <li>My curiosity runs deep: I like asking “why” until I can explain it simply, and then applying it in practice.</li>
-          <li>I’m obsessed with AI—not just using it, but learning, experimenting, and pushing myself to understand where it’s headed.</li>
-        </ul>
-        <p class="text-center italic text-gray-600 dark:text-gray-400 pt-4">Favorite quote: “Life is to be lived in arena.”</p>
-      </div>
-    </section>
-
-    <div class="w-full flex justify-center mb-12">
-      <div class="h-1 w-32 bg-gradient-to-r from-gray-200 via-slate-300 to-indigo-300 rounded-full"></div>
-    </div>
-
-    <!-- Contact Section -->
-    <section id="contact" class="mb-12 text-center">
-      <h2 class="text-xl font-semibold mb-4">Get In Touch</h2>
-      <p>Email: <a href="mailto:arunkiran721@gmail.com" class="text-blue-600 hover:underline">arunkiran721@gmail.com</a></p>
-      <p>Phone: (409) 549-3003</p>
-      <p>
-        <a href="https://www.linkedin.com/in/arun-kumar-chukkala-391768204/" class="text-blue-600 hover:underline mx-2">LinkedIn</a>
-        <a href="https://github.com/arun3676" class="text-blue-600 hover:underline mx-2">GitHub</a>
-      </p>
-    </section>
   </main>
 
   <footer class="bg-white/90 dark:bg-gray-900 text-center py-6 mt-12 transition-colors duration-500">
@@ -337,6 +141,9 @@
       <p id="loadingMessage" class="text-gray-600 dark:text-gray-400"></p>
     </div>
   </div>
+  <script>
+    lucide.createIcons();
+  </script>
 </body>
 </html>
 
