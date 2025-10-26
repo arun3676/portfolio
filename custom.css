@@ -1,26 +1,21 @@
-/* Theme variables */
+/* --- Theme Variables (Lumia Style) --- */
 :root {
-  --bg: #f7f8fb;
-  --card: #ffffff;
-  --text: #0f172a;
-  --muted: #475569;
-  --accent: #64748b;   /* slate-500 */
-  --accent-2: #94a3b8; /* slate-400 */
-  --accent-3: #a5b4fc; /* indigo-300 (subtle) */
-  --ring: rgba(100,116,139,0.25);
-  --shadow: rgba(2,6,23,0.06);
+  --background: #1a1a1a; /* Dark background */
+  --text-primary: #ffffff;
+  --text-secondary: #f0f0f0;
+
+  /* Lumia Tile Colors */
+  --lumia-blue: #00a4ef;
+  --lumia-orange: #f25022;
+  --lumia-green: #7fba00;
+  --lumia-yellow: #ffb900;
+  --lumia-teal: #008080;
+  --lumia-purple: #800080;
+  --lumia-red: #e51400;
+  --lumia-lime: #a4c400;
 }
-.dark {
-  --bg: #0b1220;
-  --card: #0f172a;
-  --text: #e5e7eb;
-  --muted: #94a3b8;
-  --accent: #a5b4fc;
-  --accent-2: #818cf8;
-  --accent-3: #64748b;
-  --ring: rgba(165,180,252,0.35);
-  --shadow: rgba(0,0,0,0.45);
-}
+
+/* No separate dark mode needed; it's dark by default */
 
 /* Animated nav link underline */
 .nav-link {
