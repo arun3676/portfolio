@@ -16,6 +16,9 @@ yarn-error.log*
 *.env
 *.local
 *.log
+*.tsbuildinfo
+vite.config.js
+vite.config.d.ts
 
 # Ignore resume if you want to keep it private
 # arun_resume.pdf
