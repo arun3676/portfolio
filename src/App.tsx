@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Tile } from './components/Tile';
-import { InfoModal } from './components/InfoModal';
+import { Tile } from './components/Tile.tsx';
+import { InfoModal } from './components/InfoModal.tsx';
 import {
   Mail,
   FileText,
