@@ -17,8 +17,8 @@ import {
 import codeAnalyzerImg from '../AI code analyzer.png';
 import learningPathImg from '../AI Learning path generator.png';
 import agentceptionImg from '../Agentception.png';
-import resumePDF from '../Arun_Chukkala_AI_Engineer_Updated.pdf';
-const medicalAssistantImg = 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1080&q=80';
+import resumePDF from '../Arun_Chukkala_AI_Engineer.pdf';
+import medicalAssistantImg from '../Multimodal Medical Analysis.png';
 
 const NavLink = ({ href, onClick, children }: { href?: string; onClick?: (event: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement>) => void; children: React.ReactNode }) => {
   if (href) {
